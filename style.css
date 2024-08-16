@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(218, 200, 176);
+    font-family: 'lora', 'serif';
+}
+h1{
+    /* margin: 0px; */
+}
+header{
+    background: rgb(49, 55, 72);
+    height: 66px;
+}
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+header .logo .logo-text{
+    margin:10px;
+    font-family: 'Candal', 'serif';
+}
+header .logo .logo-text span{
+    color: rgb(0, 255, 145) ;
+}
+header ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+header ul li{
+    float: left;
+    position: relative;
+}
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header ul li a:hover{
+    background:  rgb(35, 35, 37);
+    /* color: black; */
+    transition: 0.5s;
+}
+header .menu-toggle{
+    display: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: white;
+
+}
+header *{
+    color: white;
+}
+
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+}
+header ul li:hover ul{
+    display: block;
+}
+
+header ul li ul li{
+    width: 100%;
+}
+header ul li ul li a{
+    padding: 10px;
+    color: black;
+    background-color: inherit;
+}
+header ul li ul li a:hover{
+    background: rgb(35, 35, 37);
+    color: white;
+}
+header ul li ul li a.logout{
+    color: red;
+}
+.search-box ul li{
+    float: right;
+    position: relative;
+    left: 6px;
+}
+.search-box ul li .search{
+    position: absolute;
+    color: black;
+    padding-left: 8px;
+    height: 4em;
+}
+@media(max-width:710px){
+    header ul{
+        display: block;
+        width: 100%;
+        background-color: rgb(81, 84, 83);
+    }   
+    header ul.showing {
+        display: none;
+    }
+    header ul li{
+        width: 100%;
+        display: block;
+        /* back */
+    }
+    header .menu-toggle{
+        display: block;
+        float: right;
+        margin: 1em;
+        font-size: 1.3em;
+    }
+    header .logo{
+        padding-top: 0.5em;
+        margin-left: 1em;
+        /* margin-top: 0.7em; */
+        font-size: 0.7em;
+    }
+    header ul li ul{
+        position: static;
+        display: none;
+        width: 100%;
+        padding-left: 2em;
+    }
+    .search-box ul li{
+
+        left: 0px;
+    }
+    .search-box ul li .search{
+        position: relative;
+    }
+    
+  
+}
